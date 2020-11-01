@@ -14,6 +14,9 @@ nav {
     background-color: #47221A!important;
     font-size: 1.3em;
 }
+nav:hover, .social:hover{
+    opacity: 1;
+}
 .togglerBorder {
 border-color: #FAFBFF!important;
 }
@@ -22,7 +25,9 @@ border-color: #FAFBFF!important;
 }
 .slides {
     height: 100vh;
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 .linkView {
     color: #FAFBFF!important;
@@ -33,6 +38,7 @@ border-color: #FAFBFF!important;
 }
 .insideMenu {
     background-color: #47221A;
+    
     border: none;
 }
 @keyframes move {
