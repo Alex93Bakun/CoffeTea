@@ -1,53 +1,72 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
 main {
     position: relative;
     min-width: 350px;
 }
+#logo {
+    width: 150px;
+    border: 2px solid #FAFBFF;
+    border-radius: 5px;
+    padding: 2px;
+}
+
 nav {
     color: #FAFBFF!important;
     position: absolute!important;
     opacity: 0.8;
     z-index: 2;
-   width: 100%;
+    width: 100%;
     background-color: #47221A!important;
     font-size: 1.3em;
 }
-nav:hover, .social:hover{
+
+nav:hover {
     opacity: 1;
 }
+
 .togglerBorder {
-border-color: #FAFBFF!important;
+    border-color: #FAFBFF!important;
 }
+
 .lastItem {
     text-align: right;
 }
+
 .slides {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
+
 .linkView {
     color: #FAFBFF!important;
 }
+
 .linkView:hover {
     color: #C97417!important;
     background-color: #47221A!important;
 }
+
 .insideMenu {
     background-color: #47221A;
-    
     border: none;
 }
-@keyframes move {
-    0%  {top: 0;
-        filter: opacity(0);}
 
-    100% {top: 30%;
-        filter: opacity(1);}
+@keyframes move {
+    0% {
+        top: 0;
+        filter: opacity(0);
+    }
+    100% {
+        top: 30%;
+        filter: opacity(1);
+    }
 }
+
 .captionStyle {
     font-weight: bold;
     font-size: 2em;
@@ -59,9 +78,9 @@ border-color: #FAFBFF!important;
 }
 
 blockquote:hover {
-    background-color: rgba(30,61,66,0.5);
-
+    background-color: rgba(30, 61, 66, 0.5);
 }
+
 .icon_width {
     opacity: 0.7;
     border: 1px solid #FAFBFF;
@@ -74,10 +93,12 @@ blockquote:hover {
     padding: 0.45em;
     font-size: 1.5em;
 }
+
 .icon_width:hover {
     opacity: 1;
     color: #C97417;
 }
+
 .social {
     text-align: center;
     background-color: #47221A!important;
@@ -87,4 +108,279 @@ blockquote:hover {
     z-index: 2;
     width: 100%;
     bottom: 0;
+}
+
+.content {
+    background-color: #fafbff;
+    background-image: url(../images/bg_typical_pages.jpg);
+    background-size: 100%;
+    height: 100%;
+    padding-bottom: 80px;
+}
+
+.container {
+    height: 100%;
+}
+
+h1 {
+    padding-top: 70px;
+    font-weight: bold;
+    color: #47221a;
+}
+
+.filter span {
+    margin: 0 10px;
+}
+
+input {
+    outline: none;
+    width: 10%;
+    height: 55%;
+}
+
+.display_cards {
+    background-color: #47221a;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fafbff;
+}
+
+.image_product {
+    width: 40%;
+}
+
+.info_product {
+    width: 60%;
+}
+
+.content ul {
+    color: #47221A;
+}
+
+.content ul li {
+    background-color: rgba(201, 116, 23, 0.6);
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.addBasket {
+    background-color: #47221a;
+    border: none;
+    color: #fafbff;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 18px;
+}
+
+.availability p {
+    z-index: +1;
+}
+
+.not_available {
+    background-color: rgba(128, 128, 128, .5);
+    top: 0;
+}
+
+.btn_filter {
+    border: none;
+    background-color: rgba(201, 116, 23, 0.6);
+    color: #fafbff;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:992px) {
+    .image_product {
+        width: 60%;
+    }
+    .info_product {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .display_cards {
+        font-size: 18px;
+    }
+    .dropdown-item {
+        font-size: 14px;
+    }
+    .image_product {
+        width: 100%;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    h1 {
+        font-size: 19px;
+    }
+    .display_cards,
+    .description,
+    .availability,
+    .buy {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 16px;
+    }
+    .dropdown-item {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+}
+
+
+#Team_Members {
+    background-color: rgba(201, 116, 23, 0.6);;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    color: #47221A;
+}
+.Section_title_Subtitle {
+    padding: 15px;
+    font-weight: bold;
+}
+#wroper {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Team_Members {
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+.team_hover {
+    background-color: #888888;
+    width: 260px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+.Team_Members:hover .team_hover>img {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.Team_Members:hover .social_team {
+    opacity: 1.0;
+    transition: 1s;
+}
+.social_team a:hover {
+    background-color: #c0301c;
+    transition: 0.5s;
+}
+.social_team {
+    position: absolute;
+    top: 180px;
+    left: 60px;
+    opacity: 0.0;
+}
+.slider {
+    width: 40px;
+    height: 40px;
+}
+.slider:first-child {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    background-color: #8B8B8B;
+}
+.slider:last-child {
+    position: absolute;
+    top: 105px;
+    left: 220px;
+    background-color: #8B8B8B;
+}
+.slider a img {
+    margin-top: 11px;
+}
+.social_team a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.social_team a img {
+    margin-top: 7px;
+}
+
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    clear: both;
+}
+.clearfix::after {
+    display: block;
+}
+.last_child {
+    margin-right: 0;
+}
+@media only screen and (max-width: 800px) {
+    .Service_1, .Content, .Team_Members, .Latest_Works {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .Service_1, .Latest_Works, .Team_Members {
+        width: 50%;
+    }
+    .Service_1:last-child {
+        float: none;
+        margin: 0 auto;
+        clear: both;
+    }
+    .Content {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+    .Service_1 {
+        width: 380px;
+        padding-bottom: 100px;
+    }
+    .Content p:first-child {
+        width: 580px;
+    }
+    .Section_title_Subtitle {
+        width: 1140px;
+    }
+    .Latest_Works {
+        width: 390px;
+    }
+    /*#wroper {*/
+    /*    width: 1160px;*/
+    /*}*/
+    .Team_Members {
+        width: 280px;
+        padding-bottom: 100px;
+    }
+    #Latest_Works {
+        height: 1380px;
+        width: 1170px;
+    }
+    #Paralax_section {
+        min-width: 1140px;
+        height: 370px;
+    }
 }
