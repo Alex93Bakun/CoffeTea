@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>CoffeTea. Інтернет-магазин. Замовлення</title>
+		<meta name="description" content="Тестовый інтернет-магазин CoffeTea. Оформлення замовлення та відправка його на сервер" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="libs/fontawesome/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+          crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body data-page="order">
+	<header>
+		<nav class="navbar navbar-expand-xl navbar-dark d-flex">
+			<a class="navbar-brand flex-grow-1 " href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+			<button class="navbar-toggler togglerBorder m-1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active mr-2">
+						<a class="nav-link linkView" href="index.html">Головна <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link linkView" href="catalog.html">Каталог</a>
+					</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link linkView" href="order.html">Оплата та доставка</a>
+					</li>
+					<li class="nav-item mr-2 ">
+						<a class="nav-link linkView" href="contact.html">Про нас</a>
+					</li>
+				</ul>
+			</div>
+			<a class="nav-link linkView flex-grow-1 lastItem" href="cart.html"><i class="fas fa-shopping-basket"></i><span id="total-cart-count" class="badge"></span></a>
+		</nav>
+	</header>
+    <div class="container">
+			<h1>Оформлення замовлення. Інтернет-магазин CoffeTea</h1>
+			<div class="dots"></div>
+			<div id="order-message" class="alert alert-info"></div>
+			<br />
+			<form id="order-form" class="form-horizontal" role="form">
+				<div class="form-group">
+					<label for="input-name" class="col-sm-2 control-label">Ваше і'мя *</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="input-name" name="name" placeholder="Ваше і'мя">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="input-email" class="col-sm-2 control-label">Email *</label>
+					<div class="col-sm-6">
+						<input type="email" class="form-control" id="input-email" name="email" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="input-phone" class="col-sm-2 control-label">Телефон</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="input-phone" name="phone" placeholder="Телефон">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="dots"></div>
+					<label class="col-sm-2 control-label">Спосіб доставки</label>
+					<div class="col-sm-6 delivery-form">
+						<input type="hidden" name="delivery_type" id="delivery-type" value="" />
+						<input type="hidden" name="delivery_summa" id="delivery-summa" value="0" />
+						<input type="hidden" name="full_summa" id="full-summa" value="0" />
+						<div class="radio">
+							<label><input type="radio" name="delivery" class="js-delivery-type" data-type="Самовивіз" data-summa="0" checked> Самовивіз (безкоштовно)</label>
+						</div>
+						<div class="radio">
+								<label><input type="radio" name="delivery" class="js-delivery-type" data-type="Нова Пошта" data-summa="60"> Доставка здійснюється протягом 1-3 днів. Вартість доставки - 60 гривень</label>
+						</div>
+						<div class="radio">
+								<label><input type="radio" name="delivery" class="js-delivery-type" data-type="Укрпошта" data-summa="30"> Доставка здійснюється терміном до 4 днів (експрес). Вартість доставки - 30 гривень.</label>
+						</div>
+						<br />
+						<div id="alert-delivery" class="alert alert-info"></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="dots"></div>
+					<label for="input-address" class="col-sm-2 control-label">Адреса доставки</label>
+					<div class="col-sm-6">
+						<textarea class="form-control" id="input-address" name="address" placeholder="Адреса доставки" row="3"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="dots"></div>
+					<label for="input-message" class="col-sm-2 control-label">Повідомлення</label>
+					<div class="col-sm-6">
+						<textarea class="form-control" id="input-message" name="message" placeholder="Додаткова інформація" row="3"></textarea>
+						<br />
+						<div id="alert-validation" class="alert alert-danger d-none">
+							<button type="button" class="close js-close-alert">&times;</button>
+							<strong>Помилка!</strong> Заповніть обов'язкові поля, відмічені *
+						</div>
+						<div id="alert-order-done" class="alert alert-success d-none">
+							<button type="button" class="close js-close-alert">&times;</button>
+							<strong>Дякуємо за замовлення!</strong> Скоро ми з Вами зв'яжемося
+						</div>
+					</div>
+				</div>
+				<div class="dots"></div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-6">
+						<button id="order-btn" type="submit" class="btn btn-primary btn-order">Відправити замовлення</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<footer class="p-3 social">
+			<a href="#"><i class="fab fa-facebook-f icon_width mr-2"></i></a>
+			<a href="#"><i class="fab fa-youtube icon_width mr-2"></i></a>
+			<a href="#"><i class="fab fa-twitter icon_width mr-2"></i></a>
+			<a href="#"><i class="fab fa-instagram icon_width mr-2"></i></a>
+			<a href="mailto: mail@gmail.com"><i class="far fa-envelope icon_width mr-2"></i></a>
+		</footer>
+
+    <script id="order-message-template" type="text/template">
+        <% if (count !== 0) { %>
+            У Вашому кошику <%= count %> товари(ів) на загальну суму <%= summa %> гривень.
+            Заповніть форму нижче і натисніть кнопку Відправити замовлення.
+        <% } else { %>
+            Ваш кошик пустий. Перед відправкою замовлення додайте у кошик хоча б один товар.
+        <% } %>
+    </script>
+
+    <script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/vendor/underscore.min.js" type="text/javascript"></script>
+		<script src="js/vendor/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/modules/cart.js" type="text/javascript"></script>
+    <script src="js/modules/order.js" type="text/javascript"></script>
+    <script src="js/modules/main.js" type="text/javascript"></script>
+</body>
+</html>
