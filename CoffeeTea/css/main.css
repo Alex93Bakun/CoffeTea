@@ -1,0 +1,325 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background             : url("../images/bg_typical_pages.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size   : cover;
+	-o-background-size     : cover;
+	background-size        : cover;
+}
+
+header {
+	height: 74px;
+}
+
+footer {
+	height: 80px;
+}
+
+.container {
+	min-height: calc(100vh - 154px);
+}
+
+.wrapper {
+	display        : flex;
+	justify-content: space-between;
+}
+
+#logo {
+	width        : 150px;
+	border       : 2px solid #FAFBFF;
+	border-radius: 5px;
+	padding      : 2px;
+}
+
+nav {
+	color           : #FAFBFF !important;
+	opacity         : 0.8;
+	z-index         : 2;
+	width           : 100%;
+	background-color: #47221A !important;
+	font-size       : 1.3em;
+}
+
+nav:hover {
+	opacity: 1;
+}
+
+.togglerBorder {
+	border-color: #FAFBFF !important;
+}
+
+.lastItem {
+	text-align: right;
+}
+
+.slides {
+	height             : 100vh;
+	background-size    : cover;
+	background-repeat  : no-repeat;
+	background-position: 50% 50%;
+}
+
+.linkView {
+	color: #FAFBFF !important;
+}
+
+.linkView:hover {
+	color           : #C97417 !important;
+	background-color: #47221A !important;
+}
+
+.insideMenu {
+	background-color: #47221A;
+	border          : none;
+}
+
+.btn-group__size {
+	display        : flex;
+	align-items    : center;
+	justify-content: flex-end;
+}
+
+button.js-category {
+	width           : 90%;
+	background-color: #47221a;
+	border          : none;
+	color           : #fafbff;
+	font-weight     : bold;
+	border-radius   : 0;
+	text-align      : left;
+}
+
+button.js-category:hover,
+button.js-category:active,
+button.js-category.active {
+	background-color: #C97417;
+}
+
+.nav-pills>li>a {
+	background-color: #47221a;
+	border          : none;
+	color           : #fafbff;
+	font-weight     : bold;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover,
+.nav>li>a:focus,
+.nav>li>a:hover {
+	background-color: #C97417;
+}
+
+.social {
+	text-align      : center;
+	background-color: #47221A !important;
+	color           : #FAFBFF !important;
+	opacity         : 0.8;
+	z-index         : 2;
+	width           : 100%;
+	bottom          : 0;
+}
+
+.icon_width {
+	opacity       : 0.7;
+	border        : 1px solid #FAFBFF;
+	border-radius : 50%;
+	width         : 2em;
+	height        : 2em;
+	color         : #FAFBFF;
+	text-align    : center;
+	vertical-align: middle;
+	padding       : 0.45em;
+	font-size     : 1.5em;
+}
+
+.icon_width:hover {
+	opacity: 1;
+	color  : #C97417;
+}
+
+/* Каталог товаров с фильтрами*/
+
+#filters {
+	display       : flex;
+	flex-direction: column;
+	flex          : 0 0 30%;
+	padding-bottom: 20px;
+}
+
+#filters .btn-group {
+	display       : flex;
+	flex-direction: column;
+}
+
+#filters-form {
+	display       : flex;
+	flex-direction: column;
+}
+
+#goods {
+	flex          : 0 0 70%;
+	padding-bottom: 20px;
+}
+
+.small-good-item {
+	border       : solid 1px gray;
+	padding      : 5px;
+	margin-top   : 3px;
+	list-style   : none;
+	border-radius: 2px;
+
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	background-color: rgba(201, 116, 23, 0.6);
+}
+
+.small-good-item .col-md-2 {
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+}
+
+.small-good-item__id {
+	display: none;
+}
+
+.small-good-item__img {
+	max-width: 60%;
+}
+
+.small-good-item__name {
+	font-size: 24px;
+	color    : #47221A;
+}
+
+.small-good-item__brand {
+	font-size: 16px;
+	color    : #47221A;
+}
+
+.small-good-item__price {
+	font-size: 20px;
+	color    : #337ab7;
+	padding  : 5px;
+}
+
+.small-good-item__btn-add {
+	margin          : 10px 0;
+	background-color: #47221a;
+	border          : none;
+	color           : #fafbff;
+	font-weight     : bold;
+}
+
+.small-good-item__btn-add:hover {
+	background-color: #C97417;
+
+}
+
+.quantity-true {
+	color    : green;
+	font-size: 15px;
+}
+
+.quantity-false {
+	color    : red;
+	font-size: 15px;
+}
+
+.checkbox label {
+	font-weight: bold;
+}
+
+h4 {
+	font-weight: 600;
+}
+
+#prices-label {
+	text-align : center;
+	padding    : 5px 0;
+	margin     : 0 auto;
+	font-size  : 15px;
+	font-weight: 500;
+}
+
+/* Корзина */
+
+table {
+	background-color: #47221a50;
+	border          : 1px solid #47221a !important;
+}
+
+table thead tr {
+	font-size  : 17px;
+	font-weight: bold;
+}
+
+table tbody tr {
+	font-weight: bold;
+}
+
+.total-div {
+	font-size  : 20px;
+	font-weight: bold;
+}
+
+.cart-btn {
+	background-color: #47221a;
+	font-weight     : bold;
+	margin-bottom   : 20px;
+}
+
+.cart-btn:hover,
+.cart-btn:active {
+	background-color: #C97417;
+}
+
+.cart-item__btn-dec-count {
+	margin-right: 10px;
+	cursor      : pointer;
+	height      : 20px;
+	width       : 20px;
+}
+
+.cart-item__btn-inc-count {
+	margin-left: 10px;
+	cursor     : pointer;
+	height     : 20px;
+	width      : 20px;
+}
+
+.cart-item__btn-remove {
+	cursor: pointer;
+	height: 20px;
+	width : 20px;
+}
+
+.delivery-form {
+	max-width: 65%;
+}
+
+.dots {
+	background: url("../images/dots.png") 100% 100% repeat-x;
+	position  : relative;
+	padding   : 0 25px 16px 60px;
+	margin    : 11px 0;
+}
+
+.btn-order{
+	background-color: #47221a;
+	border          : none;
+	color           : #fafbff;
+	font-weight     : bold;
+}
+
+.btn-order:hover,
+.btn-order:active {
+	background-color: #C97417;
+}
